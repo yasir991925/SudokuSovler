@@ -1,5 +1,21 @@
+:root {
+  --main-border: #555;
+  --sub-border: #222;
+}
+
+body {
+  background-color: #111;
+  color: #fefefe;
+  display: flex;
+}
+
 .App {
+  width: 100vw;
+  height: 100vh;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +51,109 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 55px;
+  height: 55px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 1px solid var(--sub-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #111;
+  color: #f5cb59;
+}
+
+.cell:hover {
+  border-color: #f5cb59;
+  color: #f5cb59;
+}
+
+.glow {
+  background: #111;
+}
+
+.safe {
+  color: #f5cb59;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  background: #eee;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 0px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  font-weight: bolder;
+  background: #f5cb59;
+}
+
+button:active {
+  transform: scale(1);
+}
+
+.left_b {
+  border-right-color: var(--main-border);
+}
+
+.bottom_b {
+  border-bottom-color: var(--main-border);
+}
+
+.dyc {
+  color: #333;
+}
+
+.dark {
+  color: #222;
+  font-size: 3rem;
+}
+
+.icon-button {
+  padding: 12px 20px;
+}
+
+.icon-button > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.webcam-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
